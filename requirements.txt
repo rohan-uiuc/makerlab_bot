@@ -1,0 +1,7 @@
+faiss-cpu
+langchain
+beautifulsoup4
+PyPDF2
+openai
+flask
+flask-socketio
