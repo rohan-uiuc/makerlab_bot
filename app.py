@@ -23,4 +23,4 @@ def handle_message(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, allow_unsafe_werkzeug=True)
+    socketio.run(app, host="0.0.0.0", port=7860, allow_unsafe_werkzeug=True)
