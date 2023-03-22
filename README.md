@@ -1,1 +1,3 @@
-# makerlab-bot
+---
+title: makerlab-bot
+---
