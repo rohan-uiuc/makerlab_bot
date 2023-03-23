@@ -9,7 +9,7 @@ $(document).ready(function() {
     });
 
     // Initialize SocketIO connection
-    var socket = io.connect('/');
+    var socket = io.connect('https://' + document.domain + ':' + location.port);
 
     // Function to send message to Flask-SocketIO app
     function sendMessage(message) {
