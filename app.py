@@ -34,5 +34,8 @@ def handle_message(data):
         print(f"Error processing request: {str(e)}")
         emit('response', {'response': 'Server is busy. Please try again later.'})
 
-if __name__ == '__main__':
-    socketio.run(app, host="0.0.0.0", port=7860)
+# if __name__ == '__main__':
+#     socketio.run(app, host="0.0.0.0", port=7860)
+
+def create_app(**config_overrides):
+    return app
