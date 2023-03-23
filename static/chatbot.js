@@ -69,4 +69,26 @@ $(document).ready(function() {
 
     // Initial message
     displayMessage('Ask me anything');
+
+    // Function to minimize widget
+    function minimizeWidget() {
+        $chatContainer.toggleClass('minimized');
+        if ($chatContainer.hasClass('minimized')) {
+            $chatContainer.find('.chat-header h4').hide();
+            $chatContainer.find('.chat-input').hide();
+            $chatContainer.find('.chat-body').hide();
+            $chatContainer.find('.chat-header i.fa-close').removeClass('fa-close').addClass('fa-comment');
+        } else {
+            $chatContainer.find('.chat-header h4').show();
+            $chatContainer.find('.chat-input').show();
+            $chatContainer.find('.chat-body').show();
+            $chatContainer.find('.chat-header i.fa-comment').removeClass('fa-comment').addClass('fa-close');
+        }
+    }
+
+// Minimize widget on close button click
+    $('.chat-close').click(function() {
+        minimizeWidget();
+    });
+
 });
