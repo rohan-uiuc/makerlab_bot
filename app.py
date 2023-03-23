@@ -9,7 +9,8 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, cors_allowed_origins="*")
 cors = CORS(app)
 
-executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
+max_workers=4
+executor = concurrent.futures.ThreadPoolExecutor(max_workers)
 
 @app.route('/')
 def index():
@@ -21,7 +22,7 @@ def handle_message(data):
     question = data['question']
     print("question: " + question)
 
-    if len(executor.threads) >= executor.max_workers:
+    if executor._work_queue.qsize() >= max_workers:
         emit('response', {'response': 'Server is busy, please try again later'})
         return
 
