@@ -153,6 +153,7 @@
 
 /* CSS for chat-container when minimized */
 .chat-container.minimized {
+    min-width: 70px;
     height: 70px;
     border-radius: 50%;
     position: fixed;
