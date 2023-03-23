@@ -21,11 +21,17 @@ def handle_message(data):
     question = data['question']
     print("question: " + question)
 
-    future = executor.submit(run, question)
-    response = future.result()
+    if len(executor.threads) >= executor.max_workers:
+        emit('response', {'response': 'Server is busy, please try again later'})
+        return
 
-    emit('response', {'response': response})
-
+    try:
+        future = executor.submit(run, question)
+        response = future.result()
+        emit('response', {'response': response})
+    except Exception as e:
+        print(f"Error processing request: {str(e)}")
+        emit('response', {'response': 'Server is busy. Please try again later.'})
 
 if __name__ == '__main__':
     socketio.run(app, host="0.0.0.0", port=7860)
