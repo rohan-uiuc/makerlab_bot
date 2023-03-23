@@ -77,6 +77,7 @@ $(document).ready(function() {
     function minimizeWidget() {
         $chatContainer.addClass('minimized');
         $chatHeader.hide();
+        $chatBody.hide()
         $chatInput.hide();
         $chatContainer.append('<div class="chat-bot-icon"><i class="fa fa-android"></i></div>');
     }
@@ -84,6 +85,7 @@ $(document).ready(function() {
     // Function to maximize the widget
     function maximizeWidget() {
         $chatContainer.removeClass('minimized');
+        $chatBody.show()
         $chatHeader.show();
         $chatInput.show();
         $('.chat-bot-icon').remove();
