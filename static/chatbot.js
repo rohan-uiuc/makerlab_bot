@@ -1,11 +1,13 @@
 $(document).ready(function() {
     // Initialize variables
-    var $messages = $('.chat-messages');
+    var $chatContainer = $('.chat-container');
+    var $chatHeader = $('.chat-header');
+    var $chatBody = $('.chat-body');
+    var $chatInput = $('.chat-input');
     var $input = $('.chat-input input');
     var $submit = $('.chat_submit');
-    var $chatContainer = $('.chat-container');
     var session_id = '';
-    $messages.children().each(function() {
+    $chatBody.children().each(function() {
         $(this).addClass('chat-message');
     });
 
@@ -29,10 +31,10 @@ $(document).ready(function() {
         } else {
             $message.addClass('bot')
         }
-        if ($messages) {
-            $messages.append($message);
-            if ($messages[0]) {
-                $messages.animate({scrollTop: $messages[0].scrollHeight}, 300);
+        if ($chatBody) {
+            $chatBody.append($message);
+            if ($chatBody[0]) {
+                $chatBody.animate({scrollTop: $chatBody[0].scrollHeight}, 300);
             }
         } else {
             $('.chat-container').append($message);
