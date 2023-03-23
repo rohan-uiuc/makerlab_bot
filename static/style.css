@@ -189,8 +189,6 @@
 
 /* CSS for chat-container when not minimized */
 .chat-container:not(.minimized) {
-    width: 350px;
-    height: 500px;
     border-radius: 5px;
     position: fixed;
     bottom: 10px;
