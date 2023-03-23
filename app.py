@@ -14,7 +14,6 @@ def index():
 
 
 @socketio.on('message')
-@cross_origin
 def handle_message(data):
     question = data['question']
     print("question: " + question)
