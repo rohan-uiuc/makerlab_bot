@@ -151,41 +151,63 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for minimized chat header */
-.chat-header-minimized {
-    height: 40px;
+/* CSS for chat-container when minimized */
+.chat-container.minimized {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
     background-color: #fff;
-    color: #000;
-    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
 }
 
-.chat-header-minimized h4 {
+/* CSS for chat-bot-icon */
+.chat-bot-icon {
+    font-size: 30px;
+    color: #555;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* CSS for chat-header when not minimized */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6c7ae0;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* CSS for chat-container when not minimized */
+.chat-container:not(.minimized) {
+    width: 350px;
+    height: 500px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS for chat-bot-icon when chat-container is minimized */
+.chat-container.minimized .chat-bot-icon {
+    display: block;
+}
+
+/* CSS for chat-bot-icon when chat-container is not minimized */
+.chat-container:not(.minimized) .chat-bot-icon {
     display: none;
 }
 
-.chat-header-minimized i {
-    margin-top: 10px;
-}
-
-.chat-bot-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.chat-bot-icon i {
-    font-size: 24px;
-}
 

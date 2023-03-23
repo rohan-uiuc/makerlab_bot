@@ -71,25 +71,30 @@ $(document).ready(function() {
     // Initial message
     displayMessage('Ask me anything');
 
-    // Function to minimize widget
+    // Function to minimize the widget
     function minimizeWidget() {
-        $chatContainer.toggleClass('minimized');
-        if ($chatContainer.hasClass('minimized')) {
-            $chatContainer.find('.chat-header h4').hide();
-            $chatContainer.find('.chat-input').hide();
-            $chatContainer.find('.chat-body').hide();
-            $chatContainer.find('.chat-header i.fa-close').removeClass('fa-close').addClass('fa-comment');
-        } else {
-            $chatContainer.find('.chat-header h4').show();
-            $chatContainer.find('.chat-input').show();
-            $chatContainer.find('.chat-body').show();
-            $chatContainer.find('.chat-header i.fa-comment').removeClass('fa-comment').addClass('fa-close');
-        }
+        $chatContainer.addClass('minimized');
+        $chatHeader.hide();
+        $chatInput.hide();
+        $chatContainer.append('<div class="chat-bot-icon"><i class="fa fa-android"></i></div>');
     }
 
-// Minimize widget on close button click
-    $('.chat-close').click(function() {
+    // Function to maximize the widget
+    function maximizeWidget() {
+        $chatContainer.removeClass('minimized');
+        $chatHeader.show();
+        $chatInput.show();
+        $('.chat-bot-icon').remove();
+    }
+
+    // Minimize the widget on click of close button
+    $chatHeader.find('.chat-close').click(function() {
         minimizeWidget();
+    });
+
+    // Maximize the widget on click of chat-bot-icon
+    $chatContainer.on('click', '.chat-bot-icon', function() {
+        maximizeWidget();
     });
 
 });
