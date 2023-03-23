@@ -1,5 +1,5 @@
 faiss-cpu
-langchain
+langchain==0.0.117
 beautifulsoup4
 PyPDF2
 openai
