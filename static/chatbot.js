@@ -3,6 +3,7 @@ $(document).ready(function() {
     var $messages = $('.chat-messages');
     var $input = $('.chat-input input');
     var $submit = $('.chat_submit');
+    var $chatContainer = $('.chat-container');
     var session_id = '';
     $messages.children().each(function() {
         $(this).addClass('chat-message');

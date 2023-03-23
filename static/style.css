@@ -57,6 +57,7 @@
     position: relative;
     word-wrap: break-word;
     border-radius: 10px;
+    color: #fff;
 }
 
 .chat-message.user {
@@ -70,7 +71,6 @@
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 10px;
     word-wrap: break-word;
-    color: #000;
 }
 
 
