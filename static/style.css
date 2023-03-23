@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgb(113, 239, 234);
+    background-color: darkblue;
     color: #fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -65,7 +65,7 @@
     justify-content: flex-end;
     text-align: right;
     align-items: center;
-    background-color: rgba(113, 239, 234, 0.75);
+    background-color: rgba(0, 0, 139, 0.75);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 10px;
@@ -80,7 +80,7 @@
     justify-content: flex-start;
     text-align: left;
     align-items: center;
-    background-color: rgba(113, 239, 234, 0.75);
+    background-color: rgba(0, 0, 139, 0.75);
     border-top-left-radius: 0px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 0px;
@@ -107,7 +107,7 @@
     height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 16px solid #71EFEABF;
+    border-left: 16px solid #00008BBF;
     border-top-right-radius: 10px;
 }
 
@@ -120,7 +120,7 @@
     height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #71EFEABF;
+    border-right: 15px solid #00008BBF;
     border-top-left-radius: 10px;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .chat-input button {
-    background-color: #FFA500;
+    background-color: #00008BBF;
     color: #fff;
     border: none;
     border-radius: 5px;
