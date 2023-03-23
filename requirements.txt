@@ -1,4 +1,4 @@
-faiss-cpu
+faiss-cpu==1.7.3
 langchain==0.0.117
 beautifulsoup4
 PyPDF2
